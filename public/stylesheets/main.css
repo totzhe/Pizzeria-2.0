@@ -1,0 +1,245 @@
+/***
+    for main.scala.html
+***/
+
+footer{
+    position: relative;
+    bottom: -70px;
+}
+
+/* Header*/
+
+.phone_number{
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-size: 30pt;
+    position: relative;
+    right: -270px;
+    top: 20px;
+}
+
+.free_text{
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-size: 13pt;
+    position: relative;
+    right: -430px;
+    top: 15px;
+}
+
+.main_menu{
+    position: relative;
+    right: -165px;
+    top: 20px;
+}
+
+.main_menu a{
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-size: 16pt;
+    color: green;
+    letter-spacing: -0.063em;
+    word-spacing: -0.1em;
+}
+
+.main_menu a:hover{
+    text-decoration: none;
+}
+
+#sum{
+    margin-top: 10px;
+}
+
+.sum{
+    margin-top: 25px;
+    margin-right: 25px;
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-size: 13pt;
+    color: firebrick;
+}
+
+#header-menu{
+    right: -50px;
+}
+
+/* Header */
+
+
+/***
+    for index.scala.html
+***/
+.carousel {
+    margin-top: 40px;
+}
+
+#index_t{
+    margin-left: 0px;
+}
+
+#index_s{
+    margin-top: 50px;
+}
+
+/***
+    for menu.scala.html
+***/
+#menu-bar{
+    position: relative;
+    top: 20px;
+}
+
+#menu-bar a{
+    font-family: 'AGUniversityCyr-Roman', serif;
+    font-size: 26pt;
+    color: firebrick;
+    letter-spacing: -0.1em;
+    word-spacing: -0.25em;
+}
+
+#menu-bar a:hover{
+    text-decoration: none;
+    color: green;
+}
+
+.thumbnails a:hover{
+    text-decoration: none;
+}
+
+.thumbnails a{
+    color: #bd362f;
+    font-size: 20pt;
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+}
+
+#menu_thumbnails{
+    margin-top: 30px;
+}
+
+#dish-name{
+    color: #000000;
+}
+
+#dish-weight{
+    color: #808080;
+    font-size: 22px;
+}
+
+#dish-cost{
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#menu_s{
+    margin-top: 50px;
+}
+
+.cart{
+    margin-top: 10px;
+}
+
+#btn-book{
+    margin-top: 20px;
+}
+
+/***
+    for cart.scala.html
+***/
+
+#cart-header{
+    margin-top: 60px;
+    font-family: 'AGUniversityCyr-Roman', serif;
+    font-size: 30pt;
+    color: firebrick;
+}
+
+.cart-row{
+    margin-top: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+}
+
+#cart-row1 p{
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-size: 18pt;
+}
+
+#cart-row2{
+    margin-top: 40px;
+    margin-left: 60px;
+    color: green;
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-size: 18pt;
+}
+
+#cart-row3{
+    margin-top: -3px;
+    margin-left: -20px;
+}
+
+.remove_item{
+    margin-left: 35px;
+}
+
+#cart-row4{
+    /*margin-left: 60px;*/
+    margin-left: 60px;
+    margin-top: 60px;
+    color: firebrick;
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    font-size: 22pt;
+}
+
+#stepper{
+    margin-top: 48px;
+    margin-left: 50px;
+    width: 40px;
+    border-color: firebrick;
+}
+
+#text_next_stepper{
+    margin-top: 50px;
+}
+
+#cart-return-button{
+    margin-left: 50px;
+}
+
+#cart-checkout-button{
+    margin-left: 17px;
+}
+
+#cart-buttons{
+    margin-top: 30px;
+}
+
+.cart-username{
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    color: firebrick;
+}
+
+.cart-address{
+    margin-top: 10px;
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    color: firebrick;
+}
+
+.cart-phone{
+    margin-top: 10px;
+    font-family: 'Century Gothic', 'Times New Roman', serif;
+    color: firebrick;
+}
+
+.send-button{
+    margin-top: 15px;
+}
+
+.send-error{
+    margin-top: 30px;
+}
+
+#myModal{
+    width: 310px;
+    margin-left: -155px;
+}
+

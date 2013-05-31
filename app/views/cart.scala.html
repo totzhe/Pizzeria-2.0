@@ -1,0 +1,88 @@
+@(order: models.Order, userForm: Form[User])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Html("Pizza"), order.getSum()) {
+    <div class="row" id="cart-header">
+        <strong><p class="text-center">Корзина</p></strong>
+    </div>
+
+
+    @if(userForm.hasErrors) {
+        <div class="alert alert-error send-error">
+            <p><strong>Ошибка</strong> Пожалуйста, заполните правильно форму </p>
+        </div>
+    }
+
+    @for(item <- order.getItems().seq) {
+        @defining(item.getDish()) { dish =>
+            <div class="row cart-row" id="@item.getDish().getId()">
+                <div class="span3">
+                    <img src="@routes.Assets.at(dish.getPicturePath())">
+                </div>
+                <div class="span4" id="cart-row2">
+                    <p class="text-center">@dish.getName()</p> <br>
+                    <p class="text-center">@dish.getPrice() руб./шт.</p>
+                </div>
+                <div class="span2" id="cart-row3">
+                    <input type="number" min="0" max="99" step="1" dish_id="@item.getDish().getId()" value="@item.getQuantity()" id="stepper">
+                    <button class="btn btn-alert remove_item" dish_id="@item.getDish().getId()">Удалить</button>
+                </div>
+                <div class="span2" id="cart-row4">
+                    <div id="item_cost@item.getDish().getId()">@item.getCost() руб.</div>
+                </div>
+            </div>
+        }
+    }
+
+    <div class="row">
+        <div class="span7 offset6" id="cart-buttons">
+            <button class="btn btn-large btn-danger" id="cart-return-button">Вернуться к покупкам</button>
+            <button class="btn btn-large btn-success" data-toggle="modal" data-target="#myModal" id="cart-checkout-button">
+                Оформить заказ
+            </button>
+        </div>
+    </div>
+
+        <!-- Button to trigger modal -->
+        <!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>-->
+
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Оформление заказа</h3>
+            </div>
+            <div class="modal-body">
+                @helper.form(action = routes.OrderController.submit(), 'class -> "form-horizontal") {
+                    <fieldset>
+                        @inputText(userForm("username"),
+                            '_class -> "cart-username",
+                            '_label -> "Ф.И.О.",
+                            '_help -> "Введите Ф.И.О.",
+                            '_error -> userForm.globalError
+                        )
+                        @textarea(userForm("address"),
+                            '_class -> "cart-address",
+                            '_cols -> 100,
+                            '_help -> "Введите адрес доставки",
+                            '_label -> "Адрес"
+                        )
+                        @inputText(userForm("phone"),
+                            '_class -> "cart-phone",
+                            '_label -> "Телефон",
+                            '_help -> "Введите номер телефона",
+                            '_error -> userForm.globalError
+                        )
+                    </fieldset>
+                    <button class="btn btn-large btn-danger send-button" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+                    <button class="btn btn-large btn-success send-button ">Отправить</button>
+                }
+            </div>
+            <!--<div class="modal-footer">
+                <button class="btn btn-large btn-danger" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+            </div> -->
+        </div>
+        <script src="@routes.Assets.at("javascripts/cart-scripts.js")" type="text/javascript"></script>
+}
