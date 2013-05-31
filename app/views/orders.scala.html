@@ -1,16 +1,68 @@
 
 @mainadmin(Html("Pizza")) {
-    <div id="table_form" xmlns="http://www.w3.org/1999/html">
-        <table id="table-order">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Блюдо</th>
-                    <th>Кол-во</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <div id="order-container" class="span11 thumbnail">
+        <div id="group-in-container">
+            <div class="row" id="info">
+                <div class="span2">
+                    <strong>Заказ</strong> <nobr id="order-number">123456</nobr>
+                </div>
+                <div class="span4" id="order-date">
+                    <strong>Время приема</strong> <nobr id="order-time">12:34</nobr>
+                </div>
+            </div>
+            <div class="row span10" id="table-form" xmlns="http://www.w3.org/1999/html">
+                <table class="table table-striped table-bordered table-condensed" id="table-order">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Блюдо</th>
+                            <th>Кол-во</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <th>Пицца Домашняя с грибами</th>
+                            <th>3</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Пицца Домашняя с грибами</th>
+                            <th>3</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Пицца Домашняя с грибами</th>
+                            <th>3</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Пицца Домашняя с грибами</th>
+                            <th>3</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Пицца Домашняя с грибами</th>
+                            <th>3</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Пицца Домашняя с грибами</th>
+                            <th>3</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Пицца Домашняя с грибами</th>
+                            <th>3</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="span1 offset8">
+                    <button class="btn btn-success" id="btn-send">Отправить</button>
+                </div>
+            </div>
+        </div>
     </div>
 }
