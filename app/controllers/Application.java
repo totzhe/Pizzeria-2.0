@@ -127,13 +127,14 @@ public class Application extends Controller {
                 Routes.javascriptRouter("jsRoutes",
                         // Routes
                         //controllers.routes.javascript.Application.JsonExample(),
-                        //controllers.routes.javascript.Application.JsonExampleGET(),
+                        controllers.routes.javascript.Application.JsonExampleGET(),
                         //controllers.routes.javascript.Application.JsonExamplePOST(),
                         controllers.routes.javascript.Application.user(),
                         controllers.routes.javascript.OrderController.addItem(),
                         controllers.routes.javascript.OrderController.editItem(),
                         controllers.routes.javascript.OrderController.removeItem(),
-                        controllers.routes.javascript.AdministrationController.login()
+                        controllers.routes.javascript.AdministrationController.login(),
+                        controllers.routes.javascript.AdministrationController.getNewOrders()
                 )
         );
     }
