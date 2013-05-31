@@ -14,14 +14,15 @@ GET         /assets/javascripts/routes      controllers.Application.javascriptRo
 POST        /order/:id/:q                   controllers.OrderController.addItem(id:scala.Int, q:scala.Int)
 PUT         /order/:id/:q                   controllers.OrderController.editItem(id:scala.Int, q:scala.Int)
 DELETE      /order/:id                      controllers.OrderController.removeItem(id:scala.Int)
-POST        /cart                      controllers.OrderController.submit()
+POST        /cart                           controllers.OrderController.submit()
 GET         /delivery                       controllers.Application.delivery()
 GET         /contacts                       controllers.Application.contacts()
 GET         /about                          controllers.Application.about()
 
 GET         /indexadmin                     controllers.AdministrationController.indexadmin()
-GET         /login                     controllers.Application.login()
+GET         /login                          controllers.Application.login()
 POST        /login/:log/:pass               controllers.AdministrationController.login(log:String, pass:String)
+
 GET         /orders                   controllers.AdministrationController.getOrders()
 GET         /new                   controllers.AdministrationController.getNewOrders()
 
