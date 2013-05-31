@@ -1,6 +1,7 @@
 package services;
 
 import daos.GenericDao;
+import daos.OrderDao;
 import models.Dish;
 import models.Order;
 import models.OrderItem;
@@ -58,7 +59,7 @@ public class MakeOrderService {
 
     public void ConfirmOrder(Order order) {
         if (order.getItems().size() > 0) {
-            GenericDao<Order, Integer> dao = new GenericDao<Order, Integer>(Order.class);
+            OrderDao dao = new OrderDao();
             dao.create(order);
         }
     }

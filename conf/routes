@@ -8,7 +8,7 @@ GET         /menu/:id                       controllers.Application.menu(id:scal
 GET         /user-name-ajax/:id             controllers.Application.user(id:Long)
 GET         /cart                           controllers.Application.cart()
 #POST        /JsonExample                    controllers.Application.JsonExample()
-#GET         /JsonExample                    controllers.Application.JsonExampleGET()
+GET         /JsonExample                    controllers.Application.JsonExampleGET()
 #POST        /JsonExamplePOST                controllers.Application.JsonExamplePOST()
 GET         /assets/javascripts/routes      controllers.Application.javascriptRoutes()
 POST        /order/:id/:q                   controllers.OrderController.addItem(id:scala.Int, q:scala.Int)
@@ -22,7 +22,8 @@ GET         /about                          controllers.Application.about()
 GET         /indexadmin                     controllers.AdministrationController.indexadmin()
 GET         /login                     controllers.Application.login()
 POST        /login/:log/:pass               controllers.AdministrationController.login(log:String, pass:String)
-GET         /orders                   controllers.AdministrationController.orders()
+GET         /orders                   controllers.AdministrationController.getOrders()
+GET         /new                   controllers.AdministrationController.getNewOrders()
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file                   controllers.Assets.at(path="/public", file)
