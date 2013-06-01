@@ -65,16 +65,15 @@
     $(document).ready(function() {
         $("body").on('click', '.acceptDishButton', function() {
             var id = $(this).attr("dish_id");
-            //alert(id);
-            var name = $("#id.inputName");
-            alert(name);
+            var name = document.getElementById(id).getElementsByClassName("inputName")[0];
+            alert($(name).attr("value"));
             var newDish = {
-                "name": $("#id.inputName"),
+                "name": name,
                 "weight": $("#id.inputWeight")
             }
 
             var js = JSON.stringify(newDish);
-            alert(js);
+            //alert(js);
 
         });
     });
