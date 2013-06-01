@@ -1,25 +1,15 @@
 package controllers;
 
-import daos.GenericDao;
-import flexjson.JSONDeserializer;
-import flexjson.JSONSerializer;
 import models.Order;
-import models.OrderItem;
-import models.User;
+import forms.User;
 import org.codehaus.jackson.node.ObjectNode;
-import play.cache.Cache;
 import play.data.Form;
 import play.db.jpa.Transactional;
 import play.libs.Json;
 import play.mvc.Controller;
-import play.mvc.Http;
 import play.mvc.Result;
 import services.MakeOrderService;
 import views.html.cart;
-import views.html.menu;
-
-import java.util.Date;
-import java.util.Iterator;
 
 /**
  * Created with IntelliJ IDEA.

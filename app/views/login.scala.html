@@ -14,7 +14,7 @@
             <form>
                 <input type="text" name="username" placeholder="Логин" class="text" id="login" style="background:url(@routes.Assets.at("images/login/username.png")) no-repeat;" />
                 <input type="password" name="password" placeholder="••••••••••••" class="text" id="password" style="background:url(@routes.Assets.at("images/login/password.png")) no-repeat;" />
-                <input type="submit" value="Войти" class="submit" style="background:url(@routes.Assets.at("images/login/login.png")) no-repeat;" />
+                <a href="@routes.AdministrationController.indexadmin(1)">Переход</a><input type="submit" value="Войти" class="submit" style="background:url(@routes.Assets.at("images/login/login.png")) no-repeat;" />
             </form>
         </div>
     </div>
@@ -31,24 +31,4 @@ $(function(){
     $(".show").hide(500);
     });
     });
-</script>
-
-<script type="text/javascript">
-$(document).ready(function () {
-    $("body").on('click', '.submit', function () {
-        var log = $('#login').val();
-        var pas = $('#password').val();
-        jsRoutes.controllers.AdministrationController.login(log, pas).ajax({
-            type: "POST",
-            data: null,
-            dataType: 'text',   //тип ответа
-            success: function (data) {
-                alert("Успех");
-            },
-            error: function (data) {
-                alert("Что-то");
-            }
-        });
-    });
-});
 </script>

@@ -7,15 +7,19 @@ import models.DishSort;
 import models.Order;
 import play.db.jpa.Transactional;
 import play.mvc.Controller;
+import play.mvc.Http;
 import play.mvc.Result;
 import services.OrderManagementService;
+import services.ShowMenuService;
 import views.html.indexadmin;
+import views.html.menu;
 import views.html.orders;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.io.File;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,8 +30,10 @@ import java.util.List;
  */
 public class AdministrationController extends Controller {
 
-    public static Result indexadmin() {
-        return ok(indexadmin.render());
+    @Transactional
+    public static Result indexadmin(int id) {
+        return ok(indexadmin.render(id, new ShowMenuService().getDishSorts(),
+                new ShowMenuService().getDishSortById(id).getDishes()));
     }
 
     @Transactional
@@ -66,4 +72,11 @@ public class AdministrationController extends Controller {
         JSONSerializer serializer = new JSONSerializer().include("items").exclude("class", "items.class", "items.orderId", "items.dish.class", "items.dish.sort", "items.dish.picturePath", "items.dish.description");
         return ok(serializer.serialize(orders));
     }
+
+    @Transactional
+    public static Result addDish(int id) {
+        return ok(indexadmin.render(id, new ShowMenuService().getDishSorts(),
+                new ShowMenuService().getDishSortById(id).getDishes()));
+    }
+
 }
