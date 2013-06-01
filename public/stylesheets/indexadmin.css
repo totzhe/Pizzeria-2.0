@@ -1,0 +1,64 @@
+/**
+    for indexadmin.scala.html
+**/
+
+#menu-bar{
+    position: relative;
+    top: 20px;
+}
+
+#menu-bar a{
+    font-family: 'AGUniversityCyr-Roman', serif;
+    font-size: 26pt;
+    color: firebrick;
+    letter-spacing: -0.1em;
+    word-spacing: -0.25em;
+}
+
+#menu-bar a:hover{
+    text-decoration: none;
+    color: green;
+}
+
+#dish-image{
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #cccccc;
+}
+
+#input-file{
+    margin-top: 32px;
+}
+
+.ingredients{
+    margin-top: 10px;
+}
+
+#addDishButton{
+    margin-left: 12px;
+}
+
+#block-weight{
+    margin-left: 12px;
+}
+
+#block-price{
+    margin-left: 12px;
+}
+
+#big-line{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.form-block1{
+    margin-top: 80px;
+}
+
+.form-block2{
+    margin-top: 30px;
+}
+
+.acceptDishButton{
+    margin-left: 9px;
+}
